@@ -35,11 +35,15 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans
 .monogram{width:64px;height:64px;border-radius:50%;background:var(--brass);color:#fff;display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:26px;margin-bottom:18px}
 h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:34px;line-height:1.1;margin:0 0 6px;letter-spacing:-.01em}
 .role{font-size:17px;opacity:.9;margin:0}
+.trust{list-style:none;margin:12px 0 0;padding:0;font-size:14px;position:relative;z-index:1}
+.trust li{padding:3px 0 3px 18px;position:relative;opacity:.92}
+.trust li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--brass)}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:14px;text-decoration:none;font-weight:600;font-size:15px;background:var(--card);color:var(--ink);border:1px solid var(--line)}
 .btn.primary{background:var(--brass);color:#fff;border-color:transparent}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
 .btn svg{width:18px;height:18px;flex:none}
+button.btn{font-family:inherit;cursor:pointer}
 section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:14px}
 h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 12px}
 .services{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
@@ -75,8 +79,13 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 
   <header class="hero">
     <div class="monogram" aria-hidden="true">AS</div>
     <h1>Amar Sharma</h1>
-    <p class="role">Wealth Manager</p>
     <p class="role" style="font-size:14px;opacity:.8;margin-top:4px">AMFI Registered Mutual Fund Distributor</p>
+    <p class="role" style="margin-top:14px">Trusted guidance for your financial journey</p>
+    <ul class="trust">
+      <li>15+ years of experience in wealth management</li>
+      <li>Trusted by 500+ families</li>
+      <li>Serving clients across India and NRIs</li>
+    </ul>
   </header>
 
   <nav class="actions" aria-label="Contact">
@@ -88,7 +97,7 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
       WhatsApp
     </a>
-    <a class="btn" href="mailto:amarsharma@Openfutures.in">
+    <a class="btn" href="mailto:amarsharma@openfutures.in">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
       Email
     </a>
@@ -123,7 +132,7 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 
     </div>
     <div class="row">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      <div><a href="mailto:amarsharma@Openfutures.in">amarsharma@Openfutures.in</a><small>Email</small></div>
+      <div><a href="mailto:amarsharma@openfutures.in">amarsharma@openfutures.in</a><small>Email</small></div>
     </div>
     <div class="row">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
@@ -135,62 +144,14 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 
     <h2>What clients say</h2>
     <div class="carousel">
       <div class="track" id="testiTrack">
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>Your ongoing involvement and personalised approach have given me immense peace of mind regarding my financial future. Thank you for your continued partnership and for always keeping my best interests at heart.</p>
-            <cite>Akash Ahuja<small>NRI Client</small></cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>The issue of managing personal finances can be complex, but Amar Sharma makes it seamless. He is remarkably diligent and tailors strategies precisely to his clients' goals. I highly recommend his services to anyone seeking reliability and growth.</p>
-            <cite>Abhijit Halder<small>Former Special Secretary, Government of India</small></cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>I have known Amar Sharma for over 12 years. He is an excellent human being, courteous, always available and willing to help, with good knowledge of financial markets. I love to seek his advice on investments that has yielded good results.</p>
-            <cite>SN Shrivastava, IPS (Retd.)<small>Former Commissioner of Police, Delhi</small></cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>I began my financial planning journey with little structure and limited confidence. Amar explains concepts clearly, never pushes products, and helped me build a plan I understand and can follow. He is patient, transparent and consistently available.</p>
-            <cite>Prof. Manasi Kumar</cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>Mr Amar Sharma is an extremely helpful, dependable, efficient and knowledgeable person in the field of financial markets and investments. His prudent guidance over nearly 10 years has helped me profitably to a great extent.</p>
-            <cite>Gp Capt (Dr) Arup Basu</cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>Amar Sharma comes out clear and honest about how one can increase investment returns for the period you choose. He is upfront about the true cost one pays for the good service he provides consistently over time.</p>
-            <cite>G. Kishore Babu<small>Editor, World Focus</small></cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>Reliable guidance, seamless execution and excellent after-sales support.</p>
-            <cite>Rajeev K. Batra<small>Business Owner, Magic International Pvt. Ltd.</small></cite>
-          </blockquote>
-        </div>
-        <div class="slide">
-          <blockquote>
-            <span class="q">&#8220;</span>
-            <p>Excellent service with a very personalised approach. I have always felt well taken care of.</p>
-            <cite>Prakash Chandra, IRS (Retd.)</cite>
-          </blockquote>
-        </div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>Your ongoing involvement and personalised approach have given me immense peace of mind regarding my financial future. Thank you for your continued partnership and for always keeping my best interests at heart.</p><cite>Akash Ahuja<small>NRI Client</small></cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>The issue of managing personal finances can be complex, but Amar Sharma makes it seamless. He is remarkably diligent and tailors strategies precisely to his clients' goals. I highly recommend his services to anyone seeking reliability and growth.</p><cite>Abhijit Halder<small>Former Special Secretary, Government of India</small></cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>I have known Amar Sharma for over 12 years. He is an excellent human being, courteous, always available and willing to help, with good knowledge of financial markets. I love to seek his advice on investments that has yielded good results.</p><cite>SN Shrivastava, IPS (Retd.)<small>Former Commissioner of Police, Delhi</small></cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>I began my financial planning journey with little structure and limited confidence. Amar explains concepts clearly, never pushes products, and helped me build a plan I understand and can follow. He is patient, transparent and consistently available.</p><cite>Prof. Manasi Kumar</cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>Mr Amar Sharma is an extremely helpful, dependable, efficient and knowledgeable person in the field of financial markets and investments. His prudent guidance over nearly 10 years has helped me profitably to a great extent.</p><cite>Gp Capt (Dr) Arup Basu</cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>Amar Sharma comes out clear and honest about how one can increase investment returns for the period you choose. He is upfront about the true cost one pays for the good service he provides consistently over time.</p><cite>G. Kishore Babu<small>Editor, World Focus</small></cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>Reliable guidance, seamless execution and excellent after-sales support.</p><cite>Rajeev K. Batra<small>Business Owner, Magic International Pvt. Ltd.</small></cite></blockquote></div>
+        <div class="slide"><blockquote><span class="q">&#8220;</span><p>Excellent service with a very personalised approach. I have always felt well taken care of.</p><cite>Prakash Chandra, IRS (Retd.)</cite></blockquote></div>
       </div>
       <div class="car-nav">
         <button class="car-btn" id="prevBtn" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
@@ -201,9 +162,12 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 
   </section>
 
   <section class="qr">
-    <h2>Share this profile</h2>
     <div id="qr" aria-label="QR code for this profile page"></div>
     <p>Scan to open this page on any phone.</p>
+    <div style="margin-top:14px"><button class="btn" style="width:100%" id="shareBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+      Share
+    </button></div>
   </section>
 </main>
 
@@ -275,6 +239,25 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;margin:0 0 
 
   restart();
 })();
+</script>
+<script>
+document.getElementById('shareBtn').addEventListener('click', async function(){
+  var url = window.location.href.split('#')[0];
+  var data = {
+    title: 'Amar Sharma | Wealth Manager',
+    text: 'Amar Sharma, Wealth Manager. Mutual Funds, Insurance, Bonds, SIF, PMS.',
+    url: url
+  };
+  var b = this;
+  try{
+    if(navigator.share){ await navigator.share(data); }
+    else{
+      await navigator.clipboard.writeText(url);
+      b.lastChild.textContent = ' Link copied!';
+      setTimeout(function(){ b.lastChild.textContent = ' Share'; }, 2000);
+    }
+  }catch(e){}
+});
 </script>
 </body>
 </html>
